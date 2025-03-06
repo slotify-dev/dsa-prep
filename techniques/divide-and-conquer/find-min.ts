@@ -18,8 +18,6 @@ function findMin(arr: number[]): number {
 
   // conquer: recursively find the minimum of each half
   const left = findMin(arr.slice(0, middle));
-
-  // conquer: recursively find the minimum of each half
   const right = findMin(arr.slice(middle));
 
   // combine: return the smaller of the two minimums

@@ -18,8 +18,6 @@ function findMax(arr: number[]): number {
 
   // conquer: recursively find the maximum of each half
   const left = findMax(arr.slice(0, middle));
-
-  // conquer: recursively find the maximum of each half
   const right = findMax(arr.slice(middle));
 
   // combine: return the larger of the two maximums
