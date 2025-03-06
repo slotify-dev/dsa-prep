@@ -38,3 +38,80 @@ export default class TreeNode {
     this.right = right ?? null;
   }
 }
+
+/**
+ * Example Tree
+ *      1
+ *     / \
+ *    2   3
+ *   / \   \
+ *  4   5   6
+ *
+ *  BFS Traversal Output: 1 2 3 4 5 6
+ *  Pre-order DFS Output: 1 2 4 5 3 6
+ *  In-order DFS Output: 4 2 5 1 3 6
+ *  Post-order DFS Output: 4 5 2 6 3 1
+ */
+
+/**
+ * Pre-order DFS
+ *  - Process the current node
+ *  - Traverse the left subtree
+ *  - Traverse the right subtree
+ *
+ * Output: 1 2 4 5 3 6
+ */
+function dfsPreOrder(node: TreeNode | null): void {
+  if (!node) return;
+
+  // Process the current node (e.g., print its value)
+  console.log(node.val);
+
+  // Traverse left subtree
+  dfsPreOrder(node.left);
+
+  // Traverse right subtree
+  dfsPreOrder(node.right);
+}
+
+/**
+ * In-order DFS
+ *  - Traverse the left subtree
+ *  - Process the current node
+ *  - Traverse the right subtree
+ *
+ * Output: 4 2 5 1 3 6
+ */
+function dfsInOrder(node: TreeNode | null): void {
+  if (!node) return;
+
+  // Traverse left subtree
+  dfsInOrder(node.left);
+
+  // Process the current node (e.g., print its value)
+  console.log(node.val);
+
+  // Traverse right subtree
+  dfsInOrder(node.right);
+}
+
+/**
+ * Post-order DFS
+ *  - Traverse the left subtree
+ *  - Traverse the right subtree
+ *  - Process the current node
+ *
+ * Output: 4 5 2 6 3 1
+ */
+function dfsPostOrder(node: TreeNode | null): void {
+  if (!node) return;
+
+  // Traverse left subtree
+  dfsPostOrder(node.left);
+
+  // Traverse right subtree
+  dfsPostOrder(node.right);
+
+  // Process the current node (e.g., print its value)
+  console.log(node.val);
+}
