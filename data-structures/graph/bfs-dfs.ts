@@ -13,6 +13,46 @@
  * 5. Add all of the node's neighbors to the queue
  * 6. Return the visited set
  */
+
+function dfsRecursive(graph: number[][], start: number) {
+  const visited = new Set<number>();
+
+  function dfsHelper(node: number) {
+    if (visited.has(node)) return;
+
+    visited.add(node);
+
+    for (const neighbor of graph[node]) {
+      dfsHelper(neighbor);
+    }
+  }
+
+  dfsHelper(start);
+}
+
+function bfsRecursive(graph: number[][], start: number) {
+  const queue: number[] = [start];
+  const visited = new Set<number>();
+
+  function bfsHelper(node: number) {
+    if (visited.has(node)) return;
+
+    visited.add(node);
+
+    for (const neighbor of graph[node]) {
+      if (!visited.has(neighbor)) {
+        queue.push(neighbor);
+      }
+    }
+
+    if (queue.length > 0) {
+      bfsHelper(queue.shift()!);
+    }
+  }
+
+  bfsHelper(start); // Start BFS
+}
+
 function bfs(graph: number[][], start: number) {
   const queue: number[] = [start];
   const visited = new Set<number>();
