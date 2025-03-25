@@ -1,0 +1,14 @@
+{
+  "name": "tech-challenges",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@slotify/dsa": "^1.0.0"
+  }
+}
