@@ -14,10 +14,14 @@ Steps:
         - backtrack('10')
         - backtrack('11')
 
-Time Complexity: O(2^N) - Each level it makes two calls
-Space Complexity: O(N)  - Due to depth of recursion
+Time Complexity: O(2^N)
+ - 2 choice at each level 2^N
+ - N time to build string
+
+ Space Complexity: O(N)  
+- Due to depth of recursion
 */
-function generateBinaryStrings(n: number) {
+function generateBinaryStrings(n: number): string[] {
   // define output data type
   const result: string[] = [];
 
@@ -28,16 +32,36 @@ function generateBinaryStrings(n: number) {
       return;
     }
 
-    console.log(current);
-
-    // include 0
-    backtrack(current + "0");
-
-    // include 1
-    backtrack(current + "1");
+    // at this level you make two choices
+    backtrack(current + "0"); // include 0
+    backtrack(current + "1"); // include 1
   };
 
   backtrack(""); // start with empty string
+  return result;
+}
+
+function generateBinaryStringsUsingArray(n: number): string[] {
+  const result: string[] = [];
+
+  function backtrack(current: string[]) {
+    if (current.length === n) {
+      result.push(current.join(""));
+      return;
+    }
+
+    // Try '0'
+    current.push("0");
+    backtrack(current);
+    current.pop(); // Backtrack
+
+    // Try '1'
+    current.push("1");
+    backtrack(current);
+    current.pop(); // Backtrack
+  }
+
+  backtrack([]);
   return result;
 }
 
