@@ -131,3 +131,46 @@
 - "All combinations" → Backtracking
 - "Next greater" → Monotonic stack
 - O(1) space → Modify input array
+
+## Data Structure/Techniques
+
+```bash
+.
+├── Arrays
+│   ├── Two Pointers
+│   ├── Sliding Window
+│   ├── Prefix Sum
+│   └── Binary Search
+├── Strings
+│   ├── Sliding Window
+│   ├── Rabin-Karp
+│   └── KMP
+├── Linked Lists
+│   ├── Fast & Slow Pointers
+│   ├── Reverse LL
+│   └── Dummy Node
+├── Stacks
+│   ├── Monotonic Stack
+│   └── Parentheses Matching
+├── Queues
+│   ├── BFS
+│   └── Priority Queue
+├── Hash Tables
+│   ├── Frequency Counting
+│   └── Hashing
+├── Trees
+│   ├── DFS (Pre/In/Post)
+│   ├── BFS
+│   └── BST Traversal
+├── Heaps
+│   ├── Top K Elements
+│   └── Median Finder
+├── Graphs
+│   ├── BFS/DFS
+│   ├── Dijkstra's
+│   └── Union-Find
+└── DP
+    ├── Memoization
+    ├── Tabulation
+    └── State Machine
+```
