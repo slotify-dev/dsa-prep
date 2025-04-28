@@ -25,7 +25,7 @@ function diceRolls(n: number): number[][] {
     }
   };
 
-  backtrack([]);
+  backtrack([]); // O(n)
 
   return rolls;
 }
