@@ -4,8 +4,16 @@
  * Input: nums = [1,2,3]
  * Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
  *
- * Time Complexity: O(n * 2^n)
- * Space Complexity: O(n)
+ * Time Complexity:
+ * - At each element, we have 2 choices: include or exclude
+ * - For n elements: 2 × 2 × ... × 2 = 2^n subsets
+ * - Each subset copy takes O(n) time
+ * - Total: O(n × 2^n)
+ *
+ * Space Complexity:
+ * - Recursion depth: O(n)
+ * - Storage for all subsets: O(2^n × n)
+ * - Total: O(n) (excluding output space)
  */
 function subsets(nums: number[]): number[][] {
   const result: number[][] = [];
