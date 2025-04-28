@@ -20,16 +20,12 @@ function subsetsOfSizeK(nums: number[], k: number): number[][] {
   const result: number[][] = [];
 
   function backtrack(current: number[], start: number) {
-    // basecase: when current length equals to k size
-    if (current.length === k) {
-      result.push([...current]);
-      return;
-    }
+    result.push([...current]);
 
     // for array of n generate k size subsets
     for (let i = start; i < nums.length; i++) {
-      current.push(nums[i]);
-      backtrack(current, i + 1);
+      current.push(nums[i]); // [1,2]
+      backtrack(current, i + 1); // 1, [1]
       current.pop();
     }
   }

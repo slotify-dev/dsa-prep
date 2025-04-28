@@ -14,18 +14,35 @@ It:
 
 ### When to Use Backtracking
 
-Use backtracking when you need to:
+- Generate all possible...
+- (e.g., "Generate all possible subsets/permutations/combinations")
 
-- Generate all possible solutions (permutations, combinations, subsets)
-- Solve constraint satisfaction problems (N-Queens, Sudoku)
-- Make a sequence of decisions where each decision affects future choices
+- Find all solutions...
+- (e.g., "Find all solutions to the N-Queens problem")
 
-Typical problem patterns:
+- Enumerate all...
+- (e.g., "Enumerate all valid parentheses combinations")
 
-- "Find all possible..."
-- "Generate all combinations..."
-- "Print all permutations..."
-- "Count the number of ways to..."
+- Explore all paths/choices...
+- (e.g., "Explore all paths in a maze")
+
+- Decision-making with constraints
+- (e.g., "Given constraints, find valid arrangements")
+
+- Combinations/Permutations/Subsets
+- (e.g., "Print all permutations of a string")
+
+- Recursive trial and undo
+- (e.g., "Try placing a queen, backtrack if invalid")
+
+- Constraint satisfaction problems
+- (e.g., Sudoku, Crossword puzzles)
+
+- Partitioning problems
+- (e.g., "Partition a set into equal-sum subsets")
+
+- Choose/Exclude decisions
+- (e.g., "Include or exclude an element in a subset")
 
 ### The Backtracking Template
 
